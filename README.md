@@ -1,6 +1,6 @@
 # to-do-list
 
-npm i
+npm ci
 
 npm start
 
