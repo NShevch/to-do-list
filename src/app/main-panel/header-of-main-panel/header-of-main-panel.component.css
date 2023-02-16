@@ -1,0 +1,29 @@
+.header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: var(--color_greenGreyDark); */
+  font-family: 'RolandeBold';
+}
+
+.wrap_displayWhatFolderOpened {
+  margin-left: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tasksIcon_whatFolderOpened {
+  height: 30px;
+}
+
+.displayWhatFolderOpened {
+  display: inline-block;
+  font-size: 30px;
+  font-style: italic;
+  margin-left: 5px;
+  cursor: default;
+}
+

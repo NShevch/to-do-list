@@ -1,0 +1,112 @@
+.new_task_settingsBtn {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: -1px;
+  right: -3px;
+  border-radius: 50%;
+  background-image: url(^assets/images/settings.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-property: display;
+  transition-duration: 2s;
+  cursor: pointer;
+  background-color: white;
+}
+.new_task_settingsBtn:hover {
+  background-color: var(--color_orange);
+}
+.new_task_settingsBtn:active {
+  background-color: white;
+}
+
+.new_task_settingsBtn.opened {
+  background-color: var(--color_greenGreyLight);
+  border: 1px solid black;
+}
+
+.new_task_settingsWrap {
+  position: absolute;
+  background-color: #ebf4f2;
+  box-shadow: inset 0 0 5px 1px #727877;
+  padding: 6px;
+  z-index: 2;
+  min-height: 61px;
+  height: auto;
+  left: -2px;
+  top: -9px;
+  /* display: flex; */
+  /* display: none; */
+  flex-direction: column;
+  align-content: center;
+  /* justify-content: space-between; */
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.new_task_settingsEdit{
+  height: 20px;
+  width: 20px;
+  background-image: url(^assets/images/edit.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.new_task_settingsDelete{
+  height: 20px;
+  width: 20px;
+  background-image: url(^assets/images/delete.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 6px;
+}
+
+.new_task_settingsRestore {
+  height: 20px;
+  width: 20px;
+  background-image: url(^assets/images/restore.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 6px;
+}
+
+.new_task_settingsAddToFolder {
+  height: 20px;
+  width: 20px;
+  background-image: url(^assets/images/folderIcon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 6px;
+}
+
+.new_task_settingsEdit:hover, .new_task_settingsDelete:hover, .new_task_settingsRestore:hover, .new_task_settingsAddToFolder:hover {
+  transform: scale(1.2);
+}
+.new_task_settingsEdit:active, .new_task_settingsDelete:active, .new_task_settingsRestore:active, .new_task_settingsAddToFolder:active {
+  transform: scale(1);
+}
+
+.new_task_settingsAddToFolder_menu {
+  /* height: 50px; */
+  width: 120px;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  background-color: #ebf4f2;
+  box-shadow: inset 0 0 5px 1px #727877;
+  border-radius: 5px;
+  font-family: 'Rolande';
+  padding: 2px 5px;
+  font-size: 27px;
+}
+
+.new_task_settingsAddToFolder_menu_folder {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  border-bottom: 2px solid #d0dcd9;
+  padding: 2px 5px;
+}

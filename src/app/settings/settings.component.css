@@ -1,0 +1,144 @@
+:host {
+  color: black;
+  font-size: 20px;
+}
+
+.msgBackground {
+  background-color: hsl(0deg 0% 0% / 20%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */
+}
+
+.show {
+  display: flex;
+}
+
+.taskToDo_settings {
+  height: 395px;
+  width: 323px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(45deg, var(--color_orange), var(--color_red));
+  position: absolute;
+  top: calc(50vh - 434px / 2);
+  left: calc(50vw - 300px / 2);
+  border-radius: 0 15px;
+  box-shadow: 0px 0px 10px 0px #000000;
+  padding: 13px 0;
+}
+
+.taskToDo_settings_textarea {
+  height: 61%;
+  width: 85%;
+  border-radius: 5px;
+  padding: 7px 10px;
+  border: 1px solid black;
+  resize: none;
+  font-family: 'RolandeBold';
+  font-size: 27px;
+ /*  font-size: 15px; */
+  background-color: hsl(0deg 0% 100% / 80%);
+}
+.taskToDo_settings_textarea:disabled {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* rgb(208 220 217) */
+
+.dataWrap {
+  width: 97%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.taskToDo_settings_date {
+  height: 26px;
+  width: 142px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 5px;
+  background-color: hsl(0deg 0% 100% / 80%);
+}
+
+.taskToDo_settings_time {
+  height: 26px;
+  width: 74px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 2px;
+  background-color: hsl(0deg 0% 100% / 80%);
+}
+
+.clearDateBtn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  background-image: url(^assets/images/clear.png);
+  background-size: contain;
+  cursor: pointer;
+}
+.clearDateBtn:hover { 
+  transform: scale(1.2);
+}
+.clearDateBtn:active {
+  transform: scale(1);
+}
+
+.taskToDo_settings_btnsWrap {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.taskToDo_settings_btns {
+  height: 90%;
+  width: 115px;
+  background-color: var(--color_red);
+  background-image: linear-gradient(45deg, var(--color_violet), var(--color_aqua));
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 0px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-family: 'RolandeBold';
+  font-size: 31px;
+  text-shadow: 1px 1px 2px black;
+}
+.taskToDo_settings_btns:hover {
+  color: #000000;
+  text-shadow: none;
+}
+.taskToDo_settings_btns:active {
+  box-shadow: inset 0 0 13px 1px hsl(34deg 41% 23%);
+}
+
+
+
+/*------------ .taskToDo_settings_textarea scroll bar -----------*/
+
+.taskToDo_settings_textarea::-webkit-scrollbar { /* скроллбар */
+  width: 6px;
+}
+.taskToDo_settings_textarea::-webkit-scrollbar-track { /* трек */
+  background-color: var(--color_greenGreyLight);
+  box-shadow: inset 0 0 2px 2px var(--color_greenGreyDark);
+}
+.taskToDo_settings_textarea::-webkit-scrollbar-thumb { /* ползунок */
+  background-color: var(--color_aqua);
+  border-radius: 10px;
+} 
+
+/* --------------------------------------------------------------- */

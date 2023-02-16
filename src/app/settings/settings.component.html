@@ -1,0 +1,38 @@
+<div class="msgBackground" 
+  [style.display]="displayStyle">
+  <div class='add_taskToDo_settings taskToDo_settings'>
+    <textarea class='add_taskToDo_settings_textarea taskToDo_settings_textarea'
+      #text
+      placeholder='Введите задачу'></textarea>
+    <app-error-message 
+      (ifTextAreaDisabled)="changeTextareaDisability($event)"
+      [(showErrorMessage)]="errorMessageDisplayStyle"></app-error-message>
+    <div class="dataWrap">
+      <span> Срок: </span>
+      <input class='add_taskToDo_settings_date taskToDo_settings_date' 
+        #date
+        type='date'>
+      <input class='add_taskToDo_settings_time taskToDo_settings_time' 
+        #time
+        type='time'>
+      <div 
+        (click)="clearDateAndTime()"
+        class='add_taskToDo_settings_clearDateBtn clearDateBtn' 
+        title='очистить'></div>
+    </div>
+    <div class='add_taskToDo_settings_btnsWrap taskToDo_settings_btnsWrap'>
+      <div class='add_taskToDo_settings_btns taskToDo_settings_btns add_taskToDo_settings_Cancelbtn'
+        (click)="hideSettings()"> 
+        Отмена 
+      </div>
+      <div #okBtn class='add_taskToDo_settings_btns taskToDo_settings_btns add_taskToDo_settings_Okbtn'
+        (click)="onOkBtnClick({
+          text: text.value, 
+          date: date.value, 
+          time: time.value
+        })">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

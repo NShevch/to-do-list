@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  min-height: 330px;
+  min-width: 700px;
+  background-color: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color_aqua: hsl(167deg 75% 55%);
+  --color_red: hsl(0deg 97% 71%);
+  --color_orange: hsl(34deg 100% 75%);
+  --color_violet: hsl(276deg 72% 76%);
+  --color_greenGreyDark: hsl(165deg 15% 84%);
+  --color_greenGreyLight: hsl(167deg 29% 94%);
+}
+
+/*-------------------- fonts --------------------*/
+@font-face {
+  font-family: 'RolandeBold';
+  src: url(^assets/fonts/RolandeBold.ttf);
+}
+@font-face {
+  font-family: 'Rolande';
+  src: url(^assets/fonts/Rolande.ttf);
+}
+@font-face {
+  font-family: 'Selena';
+  src: url(^assets/fonts/Selena.otf);
+}
+/*-------------------------------------------------*/

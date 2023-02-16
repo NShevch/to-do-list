@@ -1,0 +1,28 @@
+.header {
+  height: 50px;
+  width: 100%;
+  /* background-color: white; */
+  color: black;
+  font-size: 40px;
+  box-shadow: inset 0px -2px 4px 0px var(--color_greenGreyDark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+}
+
+.appSettings {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+}

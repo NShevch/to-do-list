@@ -1,0 +1,41 @@
+.input {
+  display: none;
+}
+.checkbox {
+  height: 30px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-image: url(^assets/images/themes/dark_light.png);
+  background-color: white;
+  background-size: 53px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: padding-left 0.5s;
+  box-shadow: inset 0px 0px 3px 0 #000000bd, 1px 1px 3px 0px #000000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox:hover {
+  background-color: var(--color_aqua);
+}
+.ball {
+  height: 26px;
+  width: 26px;
+  border: 1px solid #0000007d;
+  border-radius: 50%;
+  background-color: var(--color_orange);
+  background-image: radial-gradient(ellipse at 7px 8px, white 5%, transparent 41%);
+  margin: 0 2px;
+  transition: 0.5s;
+}
+.input:checked ~ .checkbox {
+  padding-left: 27px;
+  transition: padding-left 0.5s;
+}
+.input:checked ~ .checkbox .ball {
+  transition: 0.5s;
+  background-color: var(--color_violet);
+  background-image: radial-gradient(ellipse at 7px 8px, white 5%, transparent 41%);
+}

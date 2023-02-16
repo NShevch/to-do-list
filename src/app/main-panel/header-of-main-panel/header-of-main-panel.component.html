@@ -1,0 +1,11 @@
+<div class="header"
+  [ngStyle]="{
+    backgroundColor: headerBGC$ | async,
+    color: headerTextColor$ | async
+  }">
+  <div class='wrap_displayWhatFolderOpened'>
+    <img class='tasksIcon_whatFolderOpened' src='./assets/images/tasksIcon_red.png'>
+    <div class='displayWhatFolderOpened'>{{folder}}</div>
+  </div>
+  <app-add-task-btn></app-add-task-btn>
+</div>

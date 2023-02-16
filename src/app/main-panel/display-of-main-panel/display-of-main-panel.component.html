@@ -1,0 +1,16 @@
+<div class="wrap"
+  [ngStyle]="{backgroundColor: displayBGC$ | async}"
+  [ngSwitch]="tasksOrRecycleBin">
+  <ng-template ngSwitchCase="tasks">
+    <app-task 
+      *ngFor="let task of tasksList"
+      [task]="task">
+    </app-task>
+  </ng-template>
+  <ng-template ngSwitchCase="recycleBin">
+    <app-task  
+      *ngFor="let deletedTask of deletedTasksList"
+      [task]="deletedTask">
+    </app-task>
+  </ng-template>  
+</div>

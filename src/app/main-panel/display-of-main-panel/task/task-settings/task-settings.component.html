@@ -1,0 +1,21 @@
+<div class="new_task_settingsBtn"
+  (click)="showSettings()">
+  <div #settingsWrap
+    class="new_task_settingsWrap"
+    [style.display]="displayStyle">
+    <div class="new_task_settingsEdit" 
+      (click)="editTask($event)"
+      title="редактировать"></div>
+    <div class="new_task_settingsDelete"
+      (click)="deleteTask($event)"
+      title="удалить"></div>
+    <div *ngIf="task.deleted"
+      class="new_task_settingsRestore"
+      (click)="restoreTask()"
+      title="восстановить"></div>
+    <div *ngIf="!task.deleted"
+      class="new_task_settingsAddToFolder"
+      (click)="folderTask()"
+      title="папки"></div>
+  </div>
+</div>

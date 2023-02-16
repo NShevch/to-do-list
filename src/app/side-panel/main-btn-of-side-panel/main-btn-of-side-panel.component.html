@@ -1,0 +1,18 @@
+<div #folderName
+  class='sidePanel_mainBtn'
+  (click)="onClick(folderName.textContent!)"> 
+  <ng-content></ng-content> 
+  <div 
+    *ngIf="dropListArrowNeeded"
+    [ngClass]="{
+      dropListArrow: true,
+      dropListArrow_aqua: dropListArrow_aqua,
+      dropListArrow_black: dropListArrow_black
+    }"></div>
+  <img 
+    *ngIf="addImageNeeded"
+    class='folderAddBtn' 
+    (click)="onAddFolderBtnClick($event)"
+    title='создать папку' 
+    [attr.src]="plusImage$ | async">
+</div>

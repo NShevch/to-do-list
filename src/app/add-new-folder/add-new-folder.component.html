@@ -1,0 +1,22 @@
+<div class="msgBackground"
+  [style.display]="displayNewFolderName">
+  <div 
+    class='newFolderName'>
+    <input #newFolderNameInput
+      [(ngModel)]="folderName"
+      class='newFolderNameInput' 
+      type='text' 
+      maxlength="20"
+      placeholder='Введите название папки'>
+      <div class="btnsWrap">
+        <div class="button"
+          (click)="hideAddNewBtnWindow()">
+          Отмена
+        </div>
+        <div class="button"
+          (click)="onCreateBtnClick()">
+          Создать
+        </div>
+      </div>   
+  </div>
+</div>

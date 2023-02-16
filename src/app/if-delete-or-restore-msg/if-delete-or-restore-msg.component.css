@@ -1,0 +1,54 @@
+.msgBackground {
+  background-color: hsl(0deg 0% 0% / 20%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+.msgWrap {
+  height: 238px;
+  width: 300px;
+  padding: 11px 28px;
+  color: red;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid red;
+  /* position: absolute;
+  top: calc(50% - 238px / 2);
+  left: calc(50% - 300px / 2); */
+  border-radius: 5px;
+  font-family: 'RolandeBold';
+  font-size: 36px;
+}
+
+button {
+  background-color: #ff4200;
+  border-radius: 5px;
+  color: white;
+  font-size: 28px;
+  margin: 10px 0 5px;
+  border: 2px solid #ff4200;
+  cursor: pointer;
+  font-family: 'RolandeBold';
+  letter-spacing: 1px;
+  width: 80px;
+}
+button:hover {
+  box-shadow: 0px 0px 3px 2px #a32a00;
+}
+button:active {
+  border: 2px solid #00000057;
+  box-shadow: inset 0 0 9px #0000009c;
+}
+
+.btnWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

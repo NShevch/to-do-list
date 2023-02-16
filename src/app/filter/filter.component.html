@@ -1,0 +1,10 @@
+<input 
+  [ngStyle]="{
+    backgroundImage: loopImage$ | async,
+    color: filterTextColor$ | async
+  }"
+  [(ngModel)]="searchText"
+  (input)="onInput()"
+  (focus)="onFocus()"
+  type="text" 
+  placeholder="Поиск">

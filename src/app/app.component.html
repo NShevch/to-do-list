@@ -1,0 +1,48 @@
+<header class='header'
+  [style.backgroundColor]="headerBGC$ | async"> 
+  <img class='logo' src='./assets/images/logo/logo_aqua.png' alt="logo"> 
+  <div class="appSettings">
+    <app-filter></app-filter>
+    <app-dark-light-theme></app-dark-light-theme>
+  </div>
+</header>
+<main class="main">
+  <app-side-panel></app-side-panel>
+  <app-main-panel></app-main-panel>
+</main>
+
+<app-settings [settingsName]='"addBtnSettings"'> 
+  Создать
+</app-settings>
+<app-settings [settingsName]='"editBtnSettings"'>
+  Сохранить
+</app-settings>
+<app-settings [settingsName]='"restoreBtnSettings"'>
+  Восстановить
+</app-settings>
+
+<app-if-delete-or-restore-msg [kindOfMsg]="'deleteMsg'">
+  Вы действительно хотите 
+  <span [style.textDecoration]="'underline'">
+    безвозвратно
+  </span> 
+  удалить эту задачу?
+</app-if-delete-or-restore-msg>
+<app-if-delete-or-restore-msg [kindOfMsg]="'restoreMsg'">
+  Вы действительно хотите 
+  <span [style.textDecoration]="'underline'">
+    восстановить
+  </span> 
+  эту задачу?
+</app-if-delete-or-restore-msg>
+<app-if-delete-or-restore-msg [kindOfMsg]="'deleteFolderMsg'">
+  Вы действительно хотите 
+  <span [ngStyle]="{
+    textDecoration: 'underline', 
+    textDecorationSkipInk: 'none'
+  }">удалить</span> 
+  эту папку?
+</app-if-delete-or-restore-msg>
+
+<app-add-new-folder></app-add-new-folder>
+<app-folders-select-window></app-folders-select-window>

@@ -1,0 +1,104 @@
+<div [ngSwitch]="tilesOrList">
+  <ng-template ngSwitchCase="tiles">
+    <div #taskElem
+      *ngIf="task.ifDisplay"
+      [ngClass]="{ 
+        new_task: true,
+        doneTask: task.done || false, 
+        expiredTask: task.expired && task.done === false || false 
+      }">
+      <div #textElem
+        [ngStyle]="{
+          backgroundColor: textElemBGC$ | async,
+          color: textElemTextColor$ | async
+        }"
+        [style.height]="task.date === '' ? '256px' : '225px'"
+        class="new_task_text">
+        {{task.text}}
+      </div>
+      <div #deadlineElem
+        [style.display]="task.date === '' ? 'none' : 'flex'"
+        [ngClass]="{ 
+          new_task_deadline: true,
+          deadlineIfDone: task.done || false
+        }">
+        <div #dateElem>
+          {{task.date}}
+        </div>
+        <div #timeElem>
+          {{task.time}}
+        </div>
+      </div>
+      <label 
+        [style.display]="task.deleted === true ? 'none' : 'inline'"
+        class="new_task_checkboxLabel">
+        <input [attr.checked]="ifChecked"
+          class="new_task_checkboxInput"
+          (input)="checkboxChange($event)"
+          type="checkbox">
+        <div class="new_task_checkboxDiv"></div>
+      </label>
+      <app-task-settings 
+        [task]="task"
+        [taskElems]="{
+          taskText: textElem, 
+          taskDate: dateElem, 
+          taskTime: timeElem
+        }">
+      </app-task-settings>
+    <!--   <app-if-delete-msg
+        (btnEvent)="ifDeleteMagBtnEvent($event)"
+        [style.display]="displayDeleteMsg"
+        ></app-if-delete-msg> -->
+    </div>
+  </ng-template>
+  <ng-template ngSwitchCase="list">
+    <div #taskElem
+      *ngIf="task.ifDisplay"
+      [ngClass]="{ 
+        new_task2: true,
+        doneTask: task.done || false, 
+        expiredTask: task.expired && task.done === false || false 
+      }">
+      <div #textElem
+        [ngStyle]="{
+          backgroundColor: textElemBGC$ | async,
+          color: textElemTextColor$ | async
+        }"
+        class="new_task_text2">
+        {{task.text}}
+      </div>
+      <div #deadlineElem
+        [style.display]="task.date === '' ? 'none' : 'flex'"
+        [ngClass]="{ 
+          new_task_deadline2: true,
+          deadlineIfDone: task.done || false
+        }">
+        <div #dateElem>
+          {{task.date}}
+        </div>
+        <div #timeElem>
+          {{task.time}}
+        </div>
+      </div>
+      <label 
+        [style.display]="task.deleted === true ? 'none' : 'inline'"
+        class="new_task_checkboxLabel2">
+        <input [attr.checked]="ifChecked"
+          class="new_task_checkboxInput2"
+          (input)="checkboxChange($event)"
+          type="checkbox">
+        <div class="new_task_checkboxDiv2"></div>
+      </label>
+      <app-task-settings 
+        [task]="task"
+        [taskElems]="{
+          taskText: textElem, 
+          taskDate: dateElem, 
+          taskTime: timeElem
+        }">
+      </app-task-settings>
+    </div>
+  </ng-template>
+</div>
+

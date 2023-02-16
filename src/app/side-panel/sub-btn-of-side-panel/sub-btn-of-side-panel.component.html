@@ -1,0 +1,17 @@
+<div #folderName class='sidePanel_subBtn' 
+  (click)="onClick(folderName.textContent!)"
+  [ngStyle]="subBtnStyles">
+  <div class="dotAndTextWrap">
+    <div class='dot'
+      [ngStyle]="dotStyles">
+    </div> 
+    <div class="contentWrap">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <img *ngIf="deleteImageNeeded"
+    class='deleteFolderBtn' 
+    (click)="onDeleteFolderBtnClick(folderName.textContent!)"
+    title='удалить папку' 
+    src="./assets/images/delete.png">
+</div>

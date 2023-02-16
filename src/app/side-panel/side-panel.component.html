@@ -1,0 +1,62 @@
+<div class="sidePanel"
+  [ngStyle]="{
+    backgroundColor: sidePanelBGColor$ | async, 
+    color: sidePanelTextColor$ | async
+  }">
+  <app-main-btn-of-side-panel
+    (onClickEvent)="toggleSubBtns($event)"
+    [dropListArrowNeeded]="true"
+    [dropListArrow_aqua]="ifShowSubBtns"
+    [dropListArrow_black]="!ifShowSubBtns">
+    Задачи
+  </app-main-btn-of-side-panel>
+  <div
+    *ngIf="ifShowSubBtns">
+    <app-sub-btn-of-side-panel
+      (onClickEvent)="displaySpecificTasks($event)"
+      [dotStyles]="{backgroundColor: 'hsl(276deg 72% 76%)'}"> 
+      На сегодня 
+    </app-sub-btn-of-side-panel>
+    <app-sub-btn-of-side-panel
+      (onClickEvent)="displaySpecificTasks($event)"
+      [dotStyles]="{backgroundColor: 'hsl(167deg 75% 55%)'}"> 
+      Текущие
+    </app-sub-btn-of-side-panel>
+    <app-sub-btn-of-side-panel
+      (onClickEvent)="displaySpecificTasks($event)"
+      [dotStyles]="{backgroundColor: 'hsl(34deg 100% 75%)'}"> 
+      Завершённые
+    </app-sub-btn-of-side-panel>
+    <app-sub-btn-of-side-panel
+      (onClickEvent)="displaySpecificTasks($event)"
+      [dotStyles]="{backgroundColor: 'hsl(0deg 97% 71%)'}"> 
+      Просроченные
+    </app-sub-btn-of-side-panel>
+  </div>
+  <app-main-btn-of-side-panel
+    (onClickEvent)="displayTasksInRecycleBin($event)">
+    Корзина
+  </app-main-btn-of-side-panel>
+  <app-main-btn-of-side-panel
+    (onClickEvent)="toggleFoldersSubBtns($event)"
+    (onAddFolderBtnClickEvent)="onAddFolderBtnClick()"
+    [dropListArrowNeeded]="true"
+    [addImageNeeded]="true"
+    [dropListArrow_aqua]="ifShowFoldersSubBtns"
+    [dropListArrow_black]="!ifShowFoldersSubBtns">
+    Папки
+  </app-main-btn-of-side-panel>
+  <div 
+    *ngIf="ifShowFoldersSubBtns"
+    class='foldersBtnSubsWrap'>
+    <app-sub-btn-of-side-panel
+      [title]="folder"
+      (onClickEvent)="displayFoldersTasks($event)"
+      [deleteImageNeeded]="true"
+      (onDeleteBtnClickEvent)="onDeleteBtnClick($event)"
+      [dotStyles]="{backgroundColor: 'var(--color_violet)'}"
+      *ngFor="let folder of folders">
+      {{folder}} 
+    </app-sub-btn-of-side-panel>
+  </div>
+</div>

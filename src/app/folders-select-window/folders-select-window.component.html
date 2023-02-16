@@ -1,0 +1,30 @@
+<div class="msgBackground"
+  [style.display]="displayFoldersList">
+  <div 
+    class='foldersList'>
+    <div class="foldersWrap">
+      <div *ngIf="folders.length === 0"
+        class="noFolders"> 
+        Нет созданных папок 
+      </div>
+      <label *ngFor="let folder of folders">
+        <input #input
+          [checked]="ifChecked(folder)"
+          [value]="folder"
+          (change)="onCheckboxChange($event)"
+          type="checkbox">
+        <div class="folderName"> {{folder}} </div>
+      </label>
+    </div>   
+    <div class="btnsWrap">
+      <!-- <div class="button"
+        (click)="hideFoldersList()">
+        Отмена
+      </div> -->
+      <div class="button"
+        (click)="onSaveFoldersBtnClick()">
+        Сохранить
+      </div>
+    </div>   
+  </div>
+</div>

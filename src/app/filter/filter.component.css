@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+}
+
+input {
+  background-color: transparent;
+  width: 0px;
+  height: 33px;
+  border-radius: 15px;
+  border: 2px solid #636968;
+  /* background-image: url(^assets/images/loop.png); */
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 6px 6px;
+  padding-left: 29px;
+  padding-top: 3px;
+  font-size: 25px;
+  font-family: 'RolandeBold';
+  transition: width 1s, padding-right 1s;
+  cursor: pointer;
+  margin: 0 20px;
+  box-shadow: 1px 1px 3px 0px #000000;
+  border: 2px solid hsl(165deg 7% 61%);
+}
+input:hover {
+  background-color: var(--color_aqua);
+}
+input:focus {
+  transition: width 1s, padding-right 1s;
+  width: 200px;
+  padding-right: 9px;
+  cursor: auto;
+}
+input:focus-visible {
+  outline: none;
+}

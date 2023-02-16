@@ -1,0 +1,12 @@
+<div class="msgBackground"
+  [style.display]="display">
+  <div class="msgWrap">
+    <div [style.textAlign]="'center'">
+      <ng-content></ng-content>
+    </div>
+    <div class="btnWrap">
+      <button (click)="hideMsg()"> Нет </button>
+      <button (click)="onYesClick()"> Да </button>
+    </div>
+  </div>
+</div>
