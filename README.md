@@ -4,6 +4,3 @@
 npm ci
 
 npm start
-
-
-Enjoy!
